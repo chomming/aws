@@ -14,6 +14,8 @@
     - 인스턴스 접근 규칙 설정
   - Elastic IP
     - 동적 컴퓨팅을 위해 사용되는 고정 public Ip 주소
+    - 인터넷을 통해 접속할 수 있는 고정적인 공인 IP 주소 할당 가능
+      - 삭제하기 전까지 IP 주소 고정 가능
 
 ## S3
 - Simple Storage Service
@@ -35,6 +37,7 @@
 ## VPC
 - Virtual Private Cloud
 - AWS 리소스를 구동할 수 있는 논리적으로 격리된 네트워크
+- 가상 네트워크 기능 및 보안 기능을 사용하여 구현
 - 구성요소
   - 서브넷
   - 라우팅 테이블
@@ -53,8 +56,12 @@
   - Classic LoadBalancer
 
 ## NAT
+- Network Address Translation
 - 외부 서비스에서 private 서브넷의 인스턴스로 접근할 수 없음
-- private 서비넷의 인스턴스에서는 외부 서비스로 접근 가능 
+- private 서비넷의 인스턴스에서는 외부 서비스로 접근 가능
+- 공용 네트워크, 개인 네트워크 사이에 설치됨
+- 내부 IP 주소, 공용 IP 주소 간 변환
+- 사설 네트워크에 속한 여러 개의 호스트가 하나의 공인 IP 주소를 사용하여 인터넷에 접속할 수 있음
 
 ## IGW
 - VPC에 있는 라우팅 테이블과 외부 인터넷을 연결해줌
@@ -65,10 +72,6 @@
 
 ## Route53
 - DNS 기능 제공
-
-# EIP
-- Elastic IP
-- public IP 주소 제공
 
 ## WAF
 
